@@ -739,3 +739,8 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 require get_template_directory() . '/inc/block-patterns.php';
 
 require get_template_directory() . '/inc/socialmediacustom.php';
+
+function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
